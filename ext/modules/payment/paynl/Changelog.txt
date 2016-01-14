@@ -1,0 +1,7 @@
+Current version is: 2012011900.
+
+Version 2012011900.(stable):
+Fixed slow notify / return with large sites.
+
+Version 2010120101.(stable):
+Added Maestro and GiroPay
