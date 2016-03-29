@@ -250,7 +250,7 @@ class paynl
         break;
 
       default:
-        $error_message = constant('MODULE_PAYMENT_' . $this->payment_method_description . '_ERROR_GENERAL');
+        $error_message = constant('MODULE_PAYMENT_PAYNL_' . $this->payment_method_description . '_ERROR_GENERAL');
         break;
     }
 
@@ -423,7 +423,7 @@ class paynl
     /*
    * Helper function to generate urls
    */
-  protected function generateReturnURL($page, $parameters)
+  protected function generateReturnURL($page, $parameters = null)
   {
     global $request_type;
     $strLink = '';
