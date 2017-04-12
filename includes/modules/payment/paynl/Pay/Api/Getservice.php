@@ -1,12 +1,14 @@
 <?php
 
-class Pay_Api_Getservice extends Pay_Api {
+class Pay_Api_Getservice extends Pay_Api
+{
 
     protected $_version = 'v3';
     protected $_controller = 'transaction';
     protected $_action = 'getService';
 
-    protected function _getPostData() {
+    protected function _getPostData()
+    {
         $data = parent::_getPostData();
 
         // Checken of alle verplichte velden geset zijn 
@@ -22,7 +24,9 @@ class Pay_Api_Getservice extends Pay_Api {
         }
         return $data;
     }
-    protected function _processResult($arrReturn) {
+
+    protected function _processResult($arrReturn)
+    {
         if (!$arrReturn['request']['result']) {
             return $arrReturn;
         }
