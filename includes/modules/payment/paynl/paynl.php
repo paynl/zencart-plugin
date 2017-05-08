@@ -172,26 +172,20 @@ class paynl
         //add products
         foreach ($order->products as $product) {
             list($productId) = explode(':', $product['id']);
-            $paynlService->addProduct(
+            if($product['final_price']  != 0 ){
+              $paynlService->addProduct(
                 $productId,
                 $product['name'],
                 $product['final_price'] * 100,
                 $product['qty']
-            );
+              );
+            }
         }
 
-
-        //add ship cost
-        $paynlService->addProduct('shipcost', $order->info['shipping_method'], $order->info['shipping_cost'] * 100, 1);
-
-        //add taxes
-        $countTaxes = 1;
-        foreach ($order->info['tax_groups'] as $tax_name => $tax_cost) {
-            if ($tax_cost > 0)
-                $paynlService->addProduct($countTaxes, $tax_name, $tax_cost * 100, 1);
-            $countTaxes++;
+        if($order->info['shipping_cost'] != 0){
+          //add ship cost
+          $paynlService->addProduct('shipcost', $order->info['shipping_method'], $order->info['shipping_cost'] * 100, 1);
         }
-
         //add coupon
         // no information in $order about the discount amount!
 
