@@ -74,11 +74,11 @@ switch ($state) {
       ob_flush();
       $cart = &$_SESSION['cart'];
       $cart->reset(true);
-            zen_session_unregister('sendto');
-            zen_session_unregister('billto');
-            zen_session_unregister('shipping');
-            zen_session_unregister('payment');
-            zen_session_unregister('comments');
+      unset($_SESSION['sendto']);
+      unset($_SESSION['billto']);
+      unset($_SESSION['shipping']);
+      unset($_SESSION['payment']);
+      unset($_SESSION['comments']);
     }
     break;
   case "CANCEL":
