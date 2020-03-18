@@ -140,7 +140,8 @@ class paynl {
     $paynlService->setDescription('Order ' . $insert_id);
     $paynlService->setExtra1($insert_id);
     $paynlService->setExtra2($customer_id);
-
+    $paynlService->setObject('zencart 1.2.0');
+    $paynlService->setOrderNumber($insert_id);
 
     $b_address = $this->splitAddress(trim($order->billing['street_address']));
     $d_address = $this->splitAddress(trim($order->delivery['street_address']));

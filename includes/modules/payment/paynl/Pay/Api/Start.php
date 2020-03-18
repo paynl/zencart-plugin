@@ -15,6 +15,7 @@ class Pay_Api_Start extends Pay_Api {
   private $_finishUrl;
   private $_exchangeUrl;
   private $_description;
+  private $_orderNumber;
   private $_enduser;
   private $_extra1;
   private $_extra2;
@@ -216,6 +217,16 @@ class Pay_Api_Start extends Pay_Api {
   }
 
   /**
+   * Set the ordernumber for the transaction
+   * @param type $orderNumber
+   */
+  public function setOrderNumber($orderNumber)
+  {
+    $this->_orderNumber = $orderNumber;
+  }
+
+
+  /**
    * Get the post data, if not all required variables are set, this wil rthrow an exception
    *
    * @return array
@@ -253,6 +264,10 @@ class Pay_Api_Start extends Pay_Api {
     }
     if (!empty($this->_exchangeUrl)) {
       $data['transaction']['orderExchangeUrl'] = $this->_exchangeUrl;
+    }
+
+    if (!empty($this->_orderNumber)) {
+      $data['transaction']['orderNumber'] = $this->_orderNumber;
     }
 
     if (!empty($this->_description)) {
