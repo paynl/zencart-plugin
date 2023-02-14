@@ -1,7 +1,7 @@
 <?php
-define('MODULE_PAYMENT_PAYNL_YOURGIFT_TEXT_TITLE', 'Pay.nl Yourgift');
+define('MODULE_PAYMENT_PAYNL_YOURGIFT_TEXT_TITLE', 'Pay. Yourgift');
 define('MODULE_PAYMENT_PAYNL_YOURGIFT_TEXT_PUBLIC_TITLE', 'Yourgift');
-define('MODULE_PAYMENT_PAYNL_YOURGIFT_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.pay.nl/registreren" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit Pay.nl Website</a>&nbsp;<a href="javascript:toggleDivBlock(\'anetInfo\');">(info)</a><span id="anetInfo" style="display: none;"><br /><i></i></span>');
+define('MODULE_PAYMENT_PAYNL_YOURGIFT_TEXT_DESCRIPTION', '<img src="images/icon_popup.gif" border="0">&nbsp;<a href="https://www.pay.nl/direct-registreren" target="_blank" style="text-decoration: underline; font-weight: bold;">Visit Pay.nl Website</a>&nbsp;<a href="javascript:toggleDivBlock(\'anetInfo\');">(info)</a><span id="anetInfo" style="display: none;"><br /><i></i></span>');
 
 define('MODULE_PAYMENT_PAYNL_ERROR_ADMIN_CONFIGURATION', 'Deze module wordt pas geladen wanneer de SERVICE ID en API TOKEN zijn geconfigureerd. Wijzig deze module om de instellingen aan te passen.');
 
